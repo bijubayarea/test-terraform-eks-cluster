@@ -4,7 +4,7 @@
 
 Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that you can use to run Kubernetes on AWS without needing to install, operate, and maintain your own Kubernetes control plane or nodes. Kubernetes is an open-source system for automating the deployment, scaling, and management of containerized applications. AWS EKS helps you provide highly available and secure clusters and automates key tasks such as patching, node provisioning, and updates.
 
-![1](https://github.com/bijubayarea/test-terraform-eks-cluster/blob/main/images/1.png)
+![1](https://github.com/bijubayarea/test-terraform-eks-cluster/blob/896dba1d3f9abf524e22d16e7f4a74d95b36c03a/images/1.png)
 ![2](https://github.com/bijubayarea/test-terraform-eks-cluster/blob/main/images/2.png)
 
 ### What is Terraform?
