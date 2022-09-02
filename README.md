@@ -369,7 +369,7 @@ This terraform github repo brings up EKS Cluster with following properties
 
 **Step 15:- Access EKS cluster using kubectl**
 
-* retrieve the access credentials for your cluster from output and configure kubectl
+* Check nodes in K8s cluster
 
   ```
   $ kubectl get nodes
