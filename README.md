@@ -327,7 +327,20 @@ This terraform github repo brings up EKS Cluster with following properties
 * Public & Private Subnets
 * EKS Cluster
 
-**Step 12:- Verify the resources on AWS**
+**Step 12:- Check output of terraform apply**
+
+* Output for `terraform plan` command 
+
+  ```
+  $ terraform output
+  cluster_endpoint = "https://1730979C8ADA4FCCA1637AF003E7BD2B.gr7.us-west-2.eks.amazonaws.com"
+  cluster_id = "staging-eks-q451u04b"
+  cluster_name = "staging-eks-q451u04b"
+  cluster_security_group_id = "sg-0ffa5cc18b828f74f"
+  region = "us-west-2
+  ```
+
+**Step 13:- Verify the resources on AWS**
 
 * Navigate to your AWS account and verify the resources
 
@@ -343,7 +356,7 @@ This terraform github repo brings up EKS Cluster with following properties
 * Kubernetes cluster is ready 
 * Next step is deploying kubernetes applications using a different terraform repository
 
-**Step 12:- Set kubeconfig to access EKS kubernetes cluster using kubectl**
+**Step 14:- Set kubeconfig to access EKS kubernetes cluster using kubectl**
 
 * retrieve the access credentials for your cluster from output and configure kubectl
 
@@ -354,7 +367,7 @@ This terraform github repo brings up EKS Cluster with following properties
   ```
 
 
-**Step 12:- Access EKS cluster using kubectl**
+**Step 15:- Access EKS cluster using kubectl**
 
 * retrieve the access credentials for your cluster from output and configure kubectl
 
