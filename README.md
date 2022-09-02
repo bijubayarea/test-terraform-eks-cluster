@@ -7,7 +7,7 @@ Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that you can
 ![1](https://github.com/bijubayarea/test-terraform-eks-cluster/blob/main/images/1.png)
 ![2](https://github.com/bijubayarea/test-terraform-eks-cluster/blob/main/images/2.png)
 
-### What is Terraform?
+### Terraform is used to provison both EKS kubernetes Infrastructure & Kubernetes app
 
 Terraform is a free and open-source infrastructure as code (IAC) that can help to automate the deployment, configuration, and management of the remote servers. Terraform can manage both existing service providers and custom in-house solutions.
 
@@ -294,7 +294,7 @@ This terraform github repo brings up EKS Cluster with following properties
 
 * store the code in the GitHub repository
 
-![4](https://github.com/bijubayarea/test-terraform-eks-cluster/blob/main/images/images/4.png)
+![4](https://github.com/bijubayarea/test-terraform-eks-cluster/blob/main/images/4.png)
 
 **Step 9:- Initialize the working directory**
 
