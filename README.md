@@ -305,10 +305,13 @@ This terraform github repo brings up EKS Cluster with following properties
 * Run `terraform plan` command in the working directory. It will give the execution plan
 
   ```
-  Plan: 50 to add, 0 to change, 0 to destroy.
+  Plan: 52 to add, 0 to change, 0 to destroy.
   Changes to Outputs:
-  + cluster_endpoint = (known after apply)
-  + cluster_id       = (known after apply)
+  + cluster_endpoint          = (known after apply)
+  + cluster_id                = (known after apply)
+  + cluster_name              = (known after apply)
+  + cluster_security_group_id = (known after apply)
+  + region                    = "us-west-2"
   ```
   
 **Step 11:- Create the cluster on AWS**
@@ -330,25 +333,12 @@ This terraform github repo brings up EKS Cluster with following properties
 
 1. EKS Cluster:
 ![5](https://github.com/bijubayarea/test-terraform-eks-cluster/blob/main/images/5.png)
+
+2. Auto Scaling Groups:
 ![6](https://github.com/bijubayarea/test-terraform-eks-cluster/blob/main/images/6.png)
 
-2. VPC & other resources:
+3. EC2 Instances:
 ![7](https://github.com/bijubayarea/test-terraform-eks-cluster/blob/main/images/7.png)
-
-3. Subnets:
-![8](https://github.com/bijubayarea/test-terraform-eks-cluster/blob/main/images/8.png)
-
-4. Security Group:
-![9](https://github.com/bijubayarea/test-terraform-eks-cluster/blob/main/images/9.png)
-
-5. IAM Role:
-![10](https://github.com/bijubayarea/test-terraform-eks-cluster/blob/main/images/10.png)
-
-6. Auto Scaling Groups:
-![11](https://github.com/bijubayarea/test-terraform-eks-cluster/blob/main/images/11.png)
-
-7. EC2 Instances:
-![12](https://github.com/bijubayarea/test-terraform-eks-cluster/blob/main/images/12.png)
 
 * Kubernetes cluster is ready 
 * Next step is deploying kubernetes applications using a different terraform repository
