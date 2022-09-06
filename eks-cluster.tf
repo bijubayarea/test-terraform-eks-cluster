@@ -1,5 +1,5 @@
 module "eks" {
-  source  = "terraform-aws-modules/eks/aws"
+  source = "terraform-aws-modules/eks/aws"
   #version = "18.26.6"
   version = "18.29.0"
 
@@ -29,7 +29,7 @@ module "eks" {
       max_size     = 2
       desired_size = 2
 
-      key_name     = aws_key_pair.key_pair.id
+      key_name = aws_key_pair.key_pair.id
 
       pre_bootstrap_user_data = <<-EOT
       echo 'foo bar'
@@ -39,7 +39,7 @@ module "eks" {
         aws_security_group.node_group_one.id
       ]
     }
-/*
+    /*
     two = {
       name = "node-group-2"
 
@@ -60,7 +60,7 @@ module "eks" {
     } */
   }
 
-   node_security_group_tags = {
+  node_security_group_tags = {
     "kubernetes.io/cluster/${local.cluster_name}" = null
   }
 
