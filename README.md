@@ -355,6 +355,7 @@ This terraform github repo brings up EKS Cluster with following properties
 
 * Kubernetes cluster is ready 
 * Next step is deploying kubernetes applications using a different terraform repository
+  ![8](https://github.com/bijubayarea/test-terraform-deploy-nginx-kubernetes-eks)
 
 **Step 14:- Set kubeconfig to access EKS kubernetes cluster using kubectl**
 
