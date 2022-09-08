@@ -298,11 +298,11 @@ This terraform github repo brings up EKS Cluster with following properties
 
 **Step 9:- Initialize the working directory**
 
-* Run `terraform init` command in the working directory. It will download all the necessary providers and all the modules
+* Run `terraform init` command in the working directory, to download all the necessary providers and the modules
 
 **Step 10:- Create a terraform plan**
 
-* Run `terraform plan` command in the working directory. It will give the execution plan
+* Run `terraform plan` command in the working directory, to display the execution plan
 
   ```
   Plan: 52 to add, 0 to change, 0 to destroy.
@@ -316,7 +316,7 @@ This terraform github repo brings up EKS Cluster with following properties
   
 **Step 11:- Create the cluster on AWS**
 
-* Run `terraform apply` command in the working directory. It will be going to create the Kubernetes cluster on AWS
+* Run `terraform apply` command in the working directory. This will create the Kubernetes EKS cluster on AWS
 * Terraform will create the below resources on AWS
 
 * VPC
@@ -340,7 +340,7 @@ This terraform github repo brings up EKS Cluster with following properties
   region = "us-west-2
   ```
 
-**Step 13:- Verify the resources on AWS**
+**Step 13:- Verify the EKS resources on AWS**
 
 * Navigate to your AWS account and verify the resources
 
