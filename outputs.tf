@@ -22,3 +22,7 @@ output "cluster_name" {
   description = "Kubernetes Cluster Name"
   value       = local.cluster_name
 }
+
+output "bastion-public-ip" {
+  value = aws_instance.public-bastion-1.public_ip
+}
