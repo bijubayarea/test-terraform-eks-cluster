@@ -38,8 +38,8 @@ resource "aws_instance" "public-bastion-1" {
 
   # Copies the privatekey file to bastion-ec2
   provisioner "file" {
-    source      = "~/.ssh/vm-key-pair.pem "
-    destination = "~/vm-key-pair.pem"
+    source      = "~/.ssh/vm-key-pair.pem"
+    destination = "/home/ec2-user/vm-key-pair.pem"
   }
 
 
