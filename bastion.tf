@@ -1,11 +1,9 @@
 resource "aws_instance" "public-bastion-1" {
-  ami           = data.aws_ami.aws_ami_free_tier.id
-  instance_type = var.instance_type
-  key_name      = aws_key_pair.key_pair.id
-  #vpc_security_group_ids       = [aws_security_group.node_group_one.id]
+  ami                    = data.aws_ami.aws_ami_free_tier.id
+  instance_type          = var.instance_type
+  key_name               = aws_key_pair.key_pair.id
   vpc_security_group_ids = [aws_security_group.staging_public_sg.id]
-  # subnet_id                   = aws_subnet.staging_public_subnet.id
-  subnet_id = module.vpc.public_subnets[0]
+  subnet_id              = module.vpc.public_subnets[0]
   # user_data                   = file("userdata.tpl")
   associate_public_ip_address = "true"
 
@@ -31,12 +29,12 @@ resource "aws_instance" "public-bastion-1" {
       "chmod +x ./kubectl",
       "mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin",
       "echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc",
-      # copy private key to public host
 
     ]
   }
 
   # Copies the privatekey file to bastion-ec2
+  # Don't do this on production systems.
   provisioner "file" {
     source      = "~/.ssh/vm-key-pair.pem"
     destination = "/home/ec2-user/vm-key-pair.pem"
