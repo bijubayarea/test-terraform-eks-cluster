@@ -24,13 +24,13 @@ resource "aws_instance" "public-bastion-1" {
     #continue on failure, don't TAINT the resource EC2
     on_failure = continue
 
-    inline = [
-      "curl -o kubectl https://s3.us-west-2.amazonaws.com/amazon-eks/1.23.7/2022-06-29/bin/linux/amd64/kubectl",
-      "chmod +x ./kubectl",
-      "mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin",
-      "echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc",
-
-    ]
+    #inline = [
+    #  "curl -o kubectl https://s3.us-west-2.amazonaws.com/amazon-eks/1.23.7/2022-06-29/bin/linux/amd64/kubectl",
+    #  "chmod +x ./kubectl",
+    #  "mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin",
+    #  "echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc",
+    #
+    #]
   }
 
   # Copies the privatekey file to bastion-ec2
