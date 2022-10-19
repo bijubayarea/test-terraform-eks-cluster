@@ -1,9 +1,9 @@
 resource "aws_instance" "public-bastion-1" {
-  ami                    = data.aws_ami.aws_ami_free_tier.id
-  instance_type          = var.instance_type
-  key_name               = aws_key_pair.key_pair.id
-  vpc_security_group_ids = [aws_security_group.staging_public_sg.id]
-  subnet_id              = module.vpc.public_subnets[0]
+  ami                         = data.aws_ami.aws_ami_free_tier.id
+  instance_type               = var.instance_type
+  key_name                    = aws_key_pair.key_pair.id
+  vpc_security_group_ids      = [aws_security_group.staging_public_sg.id]
+  subnet_id                   = module.vpc.public_subnets[0]
   # user_data                   = file("userdata.tpl")
   associate_public_ip_address = "true"
 
