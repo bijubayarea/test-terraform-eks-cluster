@@ -29,10 +29,6 @@ module "eks" {
       max_size     = 2
       desired_size = 2
 
-       # If we want to run the whole pool with spot instances we create this block
-      instance_market_options = {
-        market_type = "spot"
-      }
 
       key_name = aws_key_pair.key_pair.id
 

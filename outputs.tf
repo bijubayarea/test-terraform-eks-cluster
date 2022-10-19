@@ -23,6 +23,17 @@ output "cluster_name" {
   value       = local.cluster_name
 }
 
+output "oidc_provider_arn" {
+  description = "oidc provider"
+  value       =  module.eks.oidc_provider_arn
+}
+
+output "oidc_provider" {
+  description = "oidc provider"
+  value       =  module.eks.oidc_provider
+}
+
+
 output "bastion-public-ip" {
   value = aws_instance.public-bastion-1.public_ip
 }
