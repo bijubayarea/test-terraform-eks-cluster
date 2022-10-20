@@ -26,8 +26,6 @@ override.tf.json
 .terraformrc
 terraform.rc
 
-# Ignore providers files
-providers.tf
 
 #Ignore any pdf doc
 Deploy_EKS_Cluster_Using_Terraform.pptx
